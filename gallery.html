@@ -47,21 +47,27 @@
     }
     .gallery a {
       flex: 0 0 auto;
-      width: 300px;
-      height: 200px;
       scroll-snap-align: start;
       display: flex;
       justify-content: center;
       align-items: center;
       background-color: #f0f0f0;
       overflow: hidden;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+    .gallery.stills a {
+      width: 400px;
+      height: 225px;
+    }
+    .gallery.bts a {
+      width: 300px;
+      height: 200px;
     }
     .gallery a img {
       max-width: 100%;
       max-height: 100%;
       object-fit: cover;
-      border-radius: 4px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     .bio-section {
       margin-top: 3rem;
@@ -91,7 +97,7 @@
     <h1>Gallery</h1>
 
     <h2>Production Stills</h2>
-    <div class="gallery">
+    <div class="gallery stills">
       <a href="STILL1.png" class="glightbox" data-gallery="stills"><img src="STILL1.png" alt="Still 1"></a>
       <a href="STILL2.png" class="glightbox" data-gallery="stills"><img src="STILL2.png" alt="Still 2"></a>
       <a href="STILL3.png" class="glightbox" data-gallery="stills"><img src="STILL3.png" alt="Still 3"></a>
@@ -101,7 +107,7 @@
     </div>
 
     <h2>Behind the Scenes</h2>
-    <div class="gallery">
+    <div class="gallery bts">
       <a href="BTS1.jpg" class="glightbox" data-gallery="bts"><img src="BTS1.jpg" alt="Behind the Scenes 1"></a>
       <a href="BTS2.jpg" class="glightbox" data-gallery="bts"><img src="BTS2.jpg" alt="Behind the Scenes 2"></a>
       <a href="BTS3.jpg" class="glightbox" data-gallery="bts"><img src="BTS3.jpg" alt="Behind the Scenes 3"></a>
