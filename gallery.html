@@ -39,9 +39,16 @@
       text-transform: uppercase;
     }
     .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      display: flex;
+      overflow-x: auto;
       gap: 1rem;
+      padding-bottom: 1rem;
+      scroll-snap-type: x mandatory;
+    }
+    .gallery a {
+      flex: 0 0 auto;
+      width: 300px;
+      scroll-snap-align: start;
     }
     .gallery a img {
       width: 100%;
@@ -102,7 +109,7 @@
     <div class="bio-section">
       <img src="SCOTT HEADSHOT 01.jpg" alt="Scott Bell Headshot">
       <div class="bio-text">
-        <p>Scott Bell is a Tallahassee-based filmmaker whose work explores the collision between speculative science fiction and deeply personal human stories. In 2016, he founded Cat Family Records, a nonprofit label and art collective that published zines, organized festivals, and supported emerging artists across North Florida. Now through Art Kid Media, he brings that same punk-rooted, DIY ethos to filmmaking: self-reliant, collaborative, and grounded in the belief that risk is essential to art. While Afterlife marks his directorial debut, he’s currently developing an ensemble feature set in present-day Tallahassee.</p>
+        <p>Scott Bell is a Tallahassee-based filmmaker whose work explores the collision between speculative science fiction and deeply personal human stories. In 2016, he founded Cat Family Records, a nonprofit label and art collective that published zines, organized festivals, and supported emerging artists across North Florida. Now through Art Kid Media, he brings that same punk-rooted, DIY ethos to filmmaking: self-reliant, collaborative, and grounded in the belief that risk is essential to art. While <em>Afterlife</em> marks his directorial debut, he’s currently developing an ensemble feature set in present-day Tallahassee.</p>
       </div>
     </div>
   </div>
