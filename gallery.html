@@ -48,27 +48,31 @@
     .gallery a {
       flex: 0 0 auto;
       width: 300px;
+      height: 200px;
       scroll-snap-align: start;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+      overflow: hidden;
     }
     .gallery a img {
-      width: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
       border-radius: 4px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
     .bio-section {
-      display: flex;
-      align-items: flex-start;
-      gap: 2rem;
       margin-top: 3rem;
+      text-align: center;
     }
     .bio-section img {
       max-width: 200px;
       height: auto;
       border-radius: 4px;
       box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-    }
-    .bio-text {
-      flex: 1;
+      margin-bottom: 1rem;
     }
     footer {
       text-align: center;
