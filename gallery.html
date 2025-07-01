@@ -5,7 +5,86 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Afterlife – Gallery</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css" integrity="sha512-zj0YBSKpP/kFq3PH2x1Vp+XyyfK1iCRHQZ2n2VmeRzhMP+MfKMRgB9KQmsM+QyBhINZD69iGWrsAHNzKzvsh3A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <!-- Styles remain unchanged -->
+  <style>
+    body {
+      margin: 0;
+      font-family: Helvetica, sans-serif;
+      background: #fff;
+      color: #111;
+      line-height: 1.6;
+    }
+    header {
+      padding: 1rem 2rem;
+      background: #111;
+      color: #fff;
+    }
+    header a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .container {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+    h2 {
+      font-size: 1.3rem;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+    }
+    .gallery {
+      display: flex;
+      overflow-x: auto;
+      gap: 1rem;
+      padding-bottom: 1rem;
+      scroll-snap-type: x mandatory;
+    }
+    .gallery a {
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f0f0f0;
+      overflow: hidden;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      width: 240px;
+      height: 135px;
+    }
+    .gallery a img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: cover;
+    }
+    .bio-section {
+      margin-top: 3rem;
+      text-align: center;
+    }
+    .bio-section img {
+      max-width: 120px;
+      height: auto;
+      border-radius: 4px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      margin-bottom: 1rem;
+    }
+    .bio-text {
+      text-align: left;
+    }
+    footer {
+      text-align: center;
+      margin: 3rem 0;
+      font-size: 0.9rem;
+      color: #666;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -16,7 +95,7 @@
     <h1>Gallery</h1>
 
     <h2>Production Stills</h2>
-    <div class="gallery stills">
+    <div class="gallery">
       <a href="Afterlife_Screenshot_Kilbourn_001.png" class="glightbox" data-gallery="stills"><img src="Afterlife_Screenshot_Kilbourn_001.png" alt="Still 1"></a>
       <a href="Afterlife_Screenshot_Kilbourn_002.png" class="glightbox" data-gallery="stills"><img src="Afterlife_Screenshot_Kilbourn_002.png" alt="Still 2"></a>
       <a href="Afterlife_Screenshot_Kilbourn_004.png" class="glightbox" data-gallery="stills"><img src="Afterlife_Screenshot_Kilbourn_004.png" alt="Still 3"></a>
@@ -26,6 +105,15 @@
       <a href="Afterlife_Screenshot_Kilbourn_008.png" class="glightbox" data-gallery="stills"><img src="Afterlife_Screenshot_Kilbourn_008.png" alt="Still 7"></a>
       <a href="Afterlife_Screenshot_Kilbourn_009.png" class="glightbox" data-gallery="stills"><img src="Afterlife_Screenshot_Kilbourn_009.png" alt="Still 8"></a>
       <a href="Afterlife_Screenshot_Kilbourn_011.png" class="glightbox" data-gallery="stills"><img src="Afterlife_Screenshot_Kilbourn_011.png" alt="Still 9"></a>
+    </div>
+
+    <h2>Behind the Scenes</h2>
+    <div class="gallery">
+      <a href="BTS1.jpg" class="glightbox" data-gallery="bts"><img src="BTS1.jpg" alt="Behind the Scenes 1"></a>
+      <a href="BTS2.jpg" class="glightbox" data-gallery="bts"><img src="BTS2.jpg" alt="Behind the Scenes 2"></a>
+      <a href="BTS3.jpg" class="glightbox" data-gallery="bts"><img src="BTS3.jpg" alt="Behind the Scenes 3"></a>
+      <a href="BTS4.jpg" class="glightbox" data-gallery="bts"><img src="BTS4.jpg" alt="Behind the Scenes 4"></a>
+      <a href="BTS5.png" class="glightbox" data-gallery="bts"><img src="BTS5.png" alt="Behind the Scenes 5"></a>
     </div>
 
     <h2>Director</h2>
