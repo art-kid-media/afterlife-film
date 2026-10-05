@@ -103,9 +103,10 @@
     .credits { font-family: var(--mono); font-size: .78rem; color: var(--g600); line-height: 2.1; margin-bottom: 1.3rem; }
     .mini { font-family: var(--mono); font-size: .75rem; font-weight: 400; color: var(--g400); letter-spacing: .12em; text-transform: uppercase; margin: 1.6rem 0 .7rem; }
     ul.laurels, .shows ul { list-style: none; }
-    .laurel { font-family: var(--mono); font-size: .75rem; color: var(--g600); border-left: 2px solid var(--black); padding-left: .7rem; line-height: 1.4; margin-bottom: .5rem; }
+    .laurel { font-family: var(--mono); font-size: .75rem; color: var(--g600); border-left: 2px solid var(--black); padding-left: .7rem; line-height: 1.45; margin-bottom: .8rem; }
     .laurel a { border-bottom: 1px solid var(--g400); transition: color .2s, border-color .2s; }
     .laurel a:hover { color: var(--black); border-color: var(--black); }
+    .laurel .st { display: block; color: var(--g400); letter-spacing: .06em; text-transform: uppercase; margin-bottom: .2rem; }
     .laurel .nom { display: block; margin-top: .2rem; }
     /* Next screenings: dated rows that remove themselves the day after (see expireShows in the head) */
     .shows li { display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem 1.2rem; padding: .75rem 0; border-top: 1px solid var(--g200); }
@@ -115,6 +116,7 @@
     .shows .what a { font-size: 1rem; font-weight: 700; letter-spacing: -.01em; border-bottom: 1px solid var(--g400); transition: border-color .2s; }
     .shows .what a:hover { border-color: var(--black); }
     .shows .where { display: block; font-family: var(--mono); font-size: .75rem; color: var(--g600); line-height: 1.6; margin-top: .35rem; }
+    .shows .where > span { display: block; }
     .filmlink { display: inline-block; margin-top: 1.3rem; margin-right: 1.8rem; font-family: var(--mono); font-size: .82rem; border-bottom: 1px solid var(--black); padding-bottom: 2px; transition: color .2s, border-color .2s; }
     .filmlink:hover { color: var(--g600); border-color: var(--g600); }
 
@@ -152,19 +154,20 @@
 
     /* Credits */
     .creditsec { padding: 84px 0; }
-    .creditsec .label { text-align: center; }
-    .billing { font-family: var(--mono); font-size: .8rem; color: var(--g600); line-height: 2; text-align: center; max-width: 760px; margin: 0 auto 3.2rem; text-wrap: balance; }
+    .creditsec .label { text-align: center; margin-bottom: 2.4rem; }
     /* wide screens: cast with special thanks under it on the left, the longer crew list on the right */
     .cgrid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto 1fr; grid-template-areas: "cast crew" "thanks crew"; gap: 3rem 5rem; align-items: start; }
     .castcol { grid-area: cast; } .crewcol { grid-area: crew; } .cgrid .thanks { grid-area: thanks; }
     .cgrid h3 { font-family: var(--mono); font-size: .75rem; font-weight: 400; color: var(--g400); letter-spacing: .12em; text-transform: uppercase; margin-bottom: .9rem; }
-    dl.clist { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 1.2rem; }
+    dl.clist { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr); column-gap: 1.2rem; }
     dl.clist dt, dl.clist dd { padding: .5rem 0; border-top: 1px solid var(--g200); line-height: 1.45; }
     dl.clist dt { font-weight: 700; font-size: .95rem; }
     dl.clist dd { font-size: .92rem; color: var(--g600); }
     dl.crew dt { font-family: var(--mono); font-weight: 400; font-size: .75rem; color: var(--g600); padding-top: .62rem; }
     dl.crew dd { color: var(--black); }
-    .thanks p { font-size: .95rem; color: var(--g600); line-height: 1.8; }
+    dl.clist .nm { display: block; }
+    .thanks ul.names { list-style: none; columns: 2; column-gap: 1.2rem; }
+    .thanks ul.names li { break-inside: avoid; font-size: .95rem; padding: .5rem 0; border-top: 1px solid var(--g200); line-height: 1.45; }
 
     /* Behind the scenes strip */
     .bts { padding: 0 0 84px; }
@@ -205,10 +208,17 @@
     .rv.v { opacity: 1; transform: translateY(0); }
 
     /* Responsive */
+    @media(max-width:1100px){
+      .cgrid { grid-template-columns: 1fr; grid-template-rows: auto; grid-template-areas: "cast" "crew" "thanks"; }
+    }
+    @media(max-width:500px){
+      dl.clist { grid-template-columns: 1fr; }
+      dl.clist dd { border-top: 0; padding-top: 0; }
+      .thanks ul.names { columns: 1; }
+    }
     @media(max-width:900px){
       .film { grid-template-columns: 1fr; gap: 2.4rem; padding-top: 24px; }
       .film .poster { width: min(340px, 100%); margin: 0 auto; }
-      .cgrid { grid-template-columns: 1fr; grid-template-rows: auto; grid-template-areas: "cast" "crew" "thanks"; }
       .fin { flex-direction: column; }
     }
     @media(max-width:700px){
@@ -221,8 +231,6 @@
     }
     @media(max-width:420px){
       .bar nav { gap: .8rem; font-size: .75rem; letter-spacing: .05em; }
-      dl.clist { grid-template-columns: 1fr; }
-      dl.clist dd { border-top: 0; padding-top: 0; }
     }
 
     /* Accessibility */
@@ -280,23 +288,23 @@
           <ul role="list">
             <li data-until="2026-10-12T00:00:00-04:00">
               <span class="when"><time datetime="2026-10-11T13:30-04:00">Sun, Oct 11, 1:30 p.m.</time></span>
-              <span class="what"><a href="https://tallahasseefilmfestival.com/2026-films/" target="_blank" rel="noopener noreferrer">Tallahassee Film Festival<span class="sr-only"> (opens in a new tab)</span></a> <span class="where">Shorts 7: ALT/ESC. Theater #2, Challenger Learning Center, 200&nbsp;S&nbsp;Duval&nbsp;St. Q&amp;A with the filmmakers after.</span></span>
+              <span class="what"><a href="https://tallahasseefilmfestival.com/2026-films/" target="_blank" rel="noopener noreferrer">Tallahassee Film Festival<span class="sr-only"> (opens in a new tab)</span></a> <span class="where"><span>Shorts 7: ALT/ESC, Theater #2</span> <span>Challenger Learning Center</span> <span>200 S Duval St</span> <span>Q&amp;A with the filmmakers after</span></span></span>
             </li>
             <li data-until="2026-11-29T00:00:00-05:00">
               <span class="when"><time datetime="2026-11-28T12:45-05:00">Sat, Nov 28, 12:45 p.m.</time></span>
-              <span class="what"><a href="https://festaiv.com/festival/sunscreen-fantastic-fest" target="_blank" rel="noopener noreferrer">Sunscreen Fantastic Fest<span class="sr-only"> (opens in a new tab)</span></a> <span class="where">Shorts Block 2. Coastal Creative, 2201&nbsp;1st&nbsp;Ave&nbsp;S, St.&nbsp;Petersburg.</span></span>
+              <span class="what"><a href="https://festaiv.com/festival/sunscreen-fantastic-fest" target="_blank" rel="noopener noreferrer">Sunscreen Fantastic Fest<span class="sr-only"> (opens in a new tab)</span></a> <span class="where"><span>Shorts Block 2</span> <span>Coastal Creative</span> <span>2201 1st Ave S, St. Petersburg</span></span></span>
             </li>
           </ul>
         </div>
         <script>expireShows(document.getElementById('af-shows'));</script>
         <h2 class="mini">Festivals</h2>
         <ul class="laurels" role="list">
-          <li class="laurel">Official Selection, <a href="https://miscifi.com/2026-miscifi-awards/" target="_blank" rel="noopener noreferrer">Miami International Science Fiction Film Festival 2026<span class="sr-only"> (opens in a new tab)</span></a> <span class="nom">Six nominations, including Best Director</span></li>
-          <li class="laurel">Official Selection, <a href="https://www.norwescon.org/con/events/film-festival/" target="_blank" rel="noopener noreferrer">Norwescon Speculative Film Fest 2026<span class="sr-only"> (opens in a new tab)</span></a></li>
-          <li class="laurel">Official Selection, <a href="https://www.lacon.org/filmfestival/" target="_blank" rel="noopener noreferrer">LAcon V Worldcon Film Festival 2026<span class="sr-only"> (opens in a new tab)</span></a></li>
-          <li class="laurel">Finalist, <a href="https://brooklynscififilmfest.com/" target="_blank" rel="noopener noreferrer">Brooklyn SciFi Film Festival 2026<span class="sr-only"> (opens in a new tab)</span></a></li>
-          <li class="laurel">Official Selection, <a href="https://tallahasseefilmfestival.com/2026-films/" target="_blank" rel="noopener noreferrer">Tallahassee Film Festival 2026<span class="sr-only"> (opens in a new tab)</span></a></li>
-          <li class="laurel">Official Selection, <a href="https://festaiv.com/festival/sunscreen-fantastic-fest" target="_blank" rel="noopener noreferrer">Sunscreen Fantastic Fest 2026<span class="sr-only"> (opens in a new tab)</span></a></li>
+          <li class="laurel"><span class="st">Official Selection</span> <a href="https://miscifi.com/2026-miscifi-awards/" target="_blank" rel="noopener noreferrer">Miami International Science Fiction Film Festival&nbsp;2026<span class="sr-only"> (opens in a new tab)</span></a> <span class="nom">Six nominations, including Best Director</span></li>
+          <li class="laurel"><span class="st">Official Selection</span> <a href="https://www.norwescon.org/con/events/film-festival/" target="_blank" rel="noopener noreferrer">Norwescon Speculative Film Fest&nbsp;2026<span class="sr-only"> (opens in a new tab)</span></a></li>
+          <li class="laurel"><span class="st">Official Selection</span> <a href="https://www.lacon.org/filmfestival/" target="_blank" rel="noopener noreferrer">LAcon V Worldcon Film Festival&nbsp;2026<span class="sr-only"> (opens in a new tab)</span></a></li>
+          <li class="laurel"><span class="st">Finalist</span> <a href="https://brooklynscififilmfest.com/" target="_blank" rel="noopener noreferrer">Brooklyn SciFi Film Festival&nbsp;2026<span class="sr-only"> (opens in a new tab)</span></a></li>
+          <li class="laurel"><span class="st">Official Selection</span> <a href="https://tallahasseefilmfestival.com/2026-films/" target="_blank" rel="noopener noreferrer">Tallahassee Film Festival&nbsp;2026<span class="sr-only"> (opens in a new tab)</span></a></li>
+          <li class="laurel"><span class="st">Official Selection</span> <a href="https://festaiv.com/festival/sunscreen-fantastic-fest" target="_blank" rel="noopener noreferrer">Sunscreen Fantastic Fest&nbsp;2026<span class="sr-only"> (opens in a new tab)</span></a></li>
         </ul>
         <div>
           <a class="filmlink" href="mailto:scott@artkid.media?subject=Afterlife%20screener%20request">Request a screener &rarr;</a>
@@ -361,7 +369,6 @@
   <div class="wrap">
     <section class="creditsec" id="credits" aria-labelledby="credits-h">
       <h2 class="label" id="credits-h">Credits</h2>
-      <p class="billing">Written and directed by Charles Scott Bell. Produced by Art Kid Media. Starring Tyra Knight, Mark Ashin, Jason Chimonides, Diego Rocha, and Nidia Alvarez-Nguyen. Cinematography by Laela Kilbourn. Edited by John and Laura VonMutius. Music by One.Will and Alexander Arntzen.</p>
       <div class="cgrid">
         <div class="castcol">
           <h3>Cast</h3>
@@ -381,39 +388,39 @@
           <h3>Crew</h3>
           <dl class="clist crew">
             <dt>Writer and director</dt><dd>Charles Scott Bell</dd>
-            <dt>Producers</dt><dd>Charles Scott Bell, Cierra Alexandria Bell</dd>
+            <dt>Producers</dt><dd><span class="nm">Charles Scott Bell</span><span class="nm">Cierra Alexandria Bell</span></dd>
             <dt>Cinematographer</dt><dd>Laela Kilbourn</dd>
             <dt>Editor</dt><dd>John VonMutius</dd>
             <dt>Assistant editor</dt><dd>Laura Anuszkiewicz VonMutius</dd>
             <dt>Composer</dt><dd>Alexander Arntzen</dd>
             <dt>Music</dt><dd>One.Will</dd>
-            <dt>Production design</dt><dd>April Cluess, Derek Fleming</dd>
+            <dt>Production design</dt><dd><span class="nm">April Cluess</span><span class="nm">Derek Fleming</span></dd>
             <dt>Hair and makeup</dt><dd>Joey Egiziano</dd>
             <dt>Costumes</dt><dd>Hailey Eaton</dd>
             <dt>Property master</dt><dd>Marq Storm</dd>
             <dt>Graphic designer</dt><dd>Melissa Fleming</dd>
             <dt>Sound designer</dt><dd>Hisham Billal</dd>
             <dt>Sound mixer</dt><dd>Corey McHugh</dd>
-            <dt>Visual effects</dt><dd>Reece Mulley, Patrick Taylor</dd>
+            <dt>Visual effects</dt><dd><span class="nm">Reece Mulley</span><span class="nm">Patrick Taylor</span></dd>
             <dt>Animator</dt><dd>Muhammad Owais</dd>
             <dt>Colorist</dt><dd>Patrick Taylor</dd>
             <dt>Second assistant director</dt><dd>Louis Garcia</dd>
             <dt>Script supervisor</dt><dd>Justin Wolf</dd>
             <dt>Casting coordinator</dt><dd>Samantha Jay</dd>
             <dt>First assistant camera</dt><dd>Angel Avalos</dd>
-            <dt>Second assistant camera</dt><dd>Krystal Alexandria, Kendall Kelly</dd>
+            <dt>Second assistant camera</dt><dd><span class="nm">Krystal Alexandria</span><span class="nm">Kendall Kelly</span></dd>
             <dt>Digital imaging technician</dt><dd>Perrone Ford</dd>
             <dt>Gaffer</dt><dd>Chris Shipe</dd>
             <dt>Key grip</dt><dd>Brian Jackson</dd>
             <dt>Grip</dt><dd>Jody Dubose</dd>
-            <dt>Production assistants</dt><dd>Amos Cunningham, Lucas Gonzalez, Joey Harbour, Jada Leavy, Grayson Mullen</dd>
-            <dt>Set medics</dt><dd>Alexis Cejas Carbonell, Trevor Russo</dd>
-            <dt>Craft services</dt><dd>Lev Romano, Samantha Trenholm</dd>
+            <dt>Production assistants</dt><dd><span class="nm">Amos Cunningham</span><span class="nm">Lucas Gonzalez</span><span class="nm">Joey Harbour</span><span class="nm">Jada Leavy</span><span class="nm">Grayson Mullen</span></dd>
+            <dt>Set medics</dt><dd><span class="nm">Alexis Cejas Carbonell</span><span class="nm">Trevor Russo</span></dd>
+            <dt>Craft services</dt><dd><span class="nm">Lev Romano</span><span class="nm">Samantha Trenholm</span></dd>
           </dl>
         </div>
         <div class="thanks">
           <h3>Special thanks</h3>
-          <p>Jake Boynton, Brie Chanai Bryant, Will Crowley, Matt Denney, Ben Fox, Cameron Gilson, Tina Horvath, Josh Johnson, Stirling Lake, Andrew McFarland, Hadley Peterson, Gabrielle Simpson, Michael Trainer, John Turner, Jennifer Ventura, and Nick Warner.</p>
+          <ul class="names" role="list"><li>Jake Boynton</li><li>Brie Chanai Bryant</li><li>Will Crowley</li><li>Matt Denney</li><li>Ben Fox</li><li>Cameron Gilson</li><li>Tina Horvath</li><li>Josh Johnson</li><li>Stirling Lake</li><li>Andrew McFarland</li><li>Hadley Peterson</li><li>Gabrielle Simpson</li><li>Michael Trainer</li><li>John Turner</li><li>Jennifer Ventura</li><li>Nick Warner</li></ul>
         </div>
       </div>
     </section>
