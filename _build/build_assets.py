@@ -25,7 +25,7 @@ shutil.copyfile(f"{ART}/afterlife-poster-laurels.webp", f"{OUT}/poster-laurels.w
 shutil.copyfile(f"{ART}/csb-headshot.webp", f"{OUT}/csb-headshot.webp")                     # 600x600, Scott's pick
 shutil.copyfile(os.path.expanduser("~/Projects/_DELIVERABLES/Afterlife_TFF_2026-10-02/01_Poster_Six_Laurels/"
                                    "AFTERLIFE_POSTER_6LAURELS_OPTION1_SIDES_web_2025x3000.jpg"),
-                f"{OUT}/afterlife-poster-laurels-2025x3000.jpg")                              # download for press
+                f"{OUT}/afterlife-poster-3000px.jpg")                              # download for press
 
 # stills: 1920 and 960 wide WebP from the 3600-wide PNGs
 STILLS = ["001", "002", "004", "005", "006", "007", "008", "009", "011"]
