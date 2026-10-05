@@ -1,100 +1,517 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Afterlife – A Short Film by Charles Scott Bell</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Afterlife | A Short Film by Charles Scott Bell</title>
+  <meta name="description" content="Afterlife, a sci-fi short by Charles Scott Bell: a new outpatient procedure offers an end to April Neal&#39;s grief. Selected for six film festivals.">
+  <link rel="canonical" href="https://afterlife-film.com/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#080808">
+  <meta property="og:title" content="Afterlife | A Short Film by Charles Scott Bell">
+  <meta property="og:description" content="A new outpatient procedure offers an end to April Neal&#39;s grief. A sci-fi short from Art Kid Media, selected for six film festivals.">
+  <meta property="og:type" content="video.movie">
+  <meta property="og:url" content="https://afterlife-film.com/">
+  <meta property="og:site_name" content="Afterlife">
+  <meta property="og:image" content="https://afterlife-film.com/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Afterlife still: a woman sitting on a dock by a lake">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Afterlife | A Short Film by Charles Scott Bell">
+  <meta name="twitter:description" content="A new outpatient procedure offers an end to April Neal&#39;s grief. A sci-fi short from Art Kid Media, selected for six film festivals.">
+  <meta name="twitter:image" content="https://afterlife-film.com/assets/og-image.jpg">
+  <meta name="twitter:image:alt" content="Afterlife still: a woman sitting on a dock by a lake">
+  <link rel="preload" href="assets/fonts/inter-var-latin-v20.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/plexmono-400-latin-v20.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Movie",
+    "name": "Afterlife",
+    "url": "https://afterlife-film.com/",
+    "image": "https://afterlife-film.com/assets/poster-laurels.webp",
+    "description": "Haunted by grief in a near-future where sadness can be outsourced, April Neal considers a new outpatient procedure: an AI implant that can replicate her mind, replace it with a digital copy, and spare her loved ones the pain of loss.",
+    "duration": "PT23M51S",
+    "dateCreated": "2025",
+    "genre": [ "Science Fiction", "Drama" ],
+    "inLanguage": "en",
+    "countryOfOrigin": { "@type": "Country", "name": "United States" },
+    "director": { "@type": "Person", "name": "Charles Scott Bell", "url": "https://artkid.media/", "sameAs": [ "https://www.imdb.com/name/nm16164865/", "https://www.linkedin.com/in/charles-scott-bell" ] },
+    "author": { "@type": "Person", "name": "Charles Scott Bell" },
+    "producer": [ { "@type": "Person", "name": "Charles Scott Bell" }, { "@type": "Person", "name": "Cierra Alexandria Bell" } ],
+    "productionCompany": { "@type": "Organization", "name": "Art Kid Media", "url": "https://artkid.media/" },
+    "musicBy": [ { "@type": "Person", "name": "Alexander Arntzen" }, { "@type": "Person", "name": "One.Will" } ],
+    "actor": [
+      { "@type": "Person", "name": "Tyra Knight" },
+      { "@type": "Person", "name": "Mark Ashin" },
+      { "@type": "Person", "name": "Jason Chimonides" },
+      { "@type": "Person", "name": "Diego Rocha" },
+      { "@type": "Person", "name": "Nidia Alvarez-Nguyen" }
+    ],
+    "sameAs": [ "https://www.imdb.com/title/tt37285372/", "https://filmfreeway.com/Afterlife2026" ],
+    "award": [
+      "Official Selection, Miami International Science Fiction Film Festival 2026",
+      "Official Selection, Norwescon Speculative Film Fest 2026",
+      "Official Selection, LAcon V Worldcon Film Festival 2026",
+      "Finalist, Brooklyn SciFi Film Festival 2026",
+      "Official Selection, Tallahassee Film Festival 2026",
+      "Official Selection, Sunscreen Fantastic Fest 2026"
+    ]
+  }
+  </script>
   <style>
-    body {
-      margin: 0;
-      font-family: Helvetica, sans-serif;
-      background: #fff;
-      color: #111;
-      line-height: 1.6;
+    /* Self-hosted fonts, the same files as artkid.media */
+    @font-face { font-family: 'Inter'; font-style: normal; font-weight: 400 900; font-display: swap; src: url('assets/fonts/inter-var-latin-v20.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'IBM Plex Mono'; font-style: normal; font-weight: 400; font-display: swap; src: url('assets/fonts/plexmono-400-latin-v20.woff2') format('woff2'); unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+    @font-face { font-family: 'Inter Fallback'; src: local('Arial'); size-adjust: 107.12%; ascent-override: 90.44%; descent-override: 22.52%; line-gap-override: 0%; }
+
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --white: #FFFFFF; --black: #080808;
+      --g100: #F7F7F7; --g200: #EBEBEB; --g400: #6E6E6E; --g600: #555555;
+      --lime: #C5E838; --pink: #E8368B; --pink-deep: #D81C79; --cyan: #40C4C4; --blue: #3355CC; --navy: #1C3545;
+      --f: 'Inter', 'Inter Fallback', Arial, Helvetica, 'Helvetica Neue', sans-serif;
+      --mono: 'IBM Plex Mono', monospace;
     }
-    .poster {
-      width: 100%;
-      max-width: 700px;
-      margin: 0 auto;
-      display: block;
-      padding-top: 2rem;
+    html { scroll-behavior: smooth; }
+    body { background: var(--white); color: var(--black); font-family: var(--f); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+    ::selection { background: var(--pink); color: #fff; }
+    a { color: inherit; text-decoration: none; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+    .wrap { max-width: 1200px; margin: 0 auto; padding: 0 clamp(1.5rem,5vw,4rem); }
+    section[id], main { scroll-margin-top: 1rem; }
+
+    /* NAV: quiet, static */
+    .bar { display: flex; align-items: center; justify-content: space-between; height: 76px; gap: 1rem; }
+    .lockup { font-size: 1.35rem; font-weight: 900; font-style: italic; letter-spacing: -.03em; flex-shrink: 0; }
+    .bar nav { display: flex; gap: 2rem; font-family: var(--mono); font-size: .75rem; letter-spacing: .1em; text-transform: uppercase; color: var(--g400); }
+    .bar nav a { padding: .5rem 0; transition: color .2s; }
+    .bar nav a:hover { color: var(--black); }
+
+    /* Film block */
+    .film { display: grid; grid-template-columns: 1fr 1.15fr; gap: 5rem; align-items: center; padding: 40px 0 64px; }
+    .film > div { min-width: 0; }
+    .film .poster img { width: 100%; height: auto; aspect-ratio: 1000 / 1333; display: block; }
+    .eyebrow { font-family: var(--mono); font-size: .8rem; color: var(--g400); letter-spacing: .08em; margin: 0 0 1rem; }
+    .film h1 { font-size: clamp(2.8rem,6vw,5.2rem); font-weight: 900; font-style: italic; letter-spacing: -.04em; line-height: 1; margin-bottom: 1.4rem; }
+    .lead { font-size: 1.25rem; font-weight: 600; line-height: 1.5; margin-bottom: 1rem; max-width: 520px; text-wrap: balance; }
+    .log { font-size: 1.05rem; color: var(--g600); line-height: 1.75; max-width: 520px; margin-bottom: 1.6rem; }
+    .credits { font-family: var(--mono); font-size: .78rem; color: var(--g600); line-height: 2.1; margin-bottom: 1.3rem; }
+    .mini { font-family: var(--mono); font-size: .75rem; font-weight: 400; color: var(--g400); letter-spacing: .12em; text-transform: uppercase; margin: 1.6rem 0 .7rem; }
+    ul.laurels, .shows ul { list-style: none; }
+    .laurel { font-family: var(--mono); font-size: .75rem; color: var(--g600); border-left: 2px solid var(--black); padding-left: .7rem; line-height: 1.4; margin-bottom: .5rem; }
+    .laurel a { border-bottom: 1px solid var(--g400); transition: color .2s, border-color .2s; }
+    .laurel a:hover { color: var(--black); border-color: var(--black); }
+    .laurel .nom { display: block; margin-top: .2rem; }
+    /* Next screenings: dated rows that remove themselves the day after (see expireShows in the head) */
+    .shows li { display: flex; flex-wrap: wrap; align-items: baseline; gap: .3rem 1.2rem; padding: .75rem 0; border-top: 1px solid var(--g200); }
+    .shows li:last-child { border-bottom: 1px solid var(--g200); }
+    .shows .when { flex: 0 1 11.5rem; font-family: var(--mono); font-size: .8rem; color: var(--black); line-height: 1.6; }
+    .shows .what { flex: 1 1 16rem; }
+    .shows .what a { font-size: 1rem; font-weight: 700; letter-spacing: -.01em; border-bottom: 1px solid var(--g400); transition: border-color .2s; }
+    .shows .what a:hover { border-color: var(--black); }
+    .shows .where { display: block; font-family: var(--mono); font-size: .75rem; color: var(--g600); line-height: 1.6; margin-top: .35rem; }
+    .filmlink { display: inline-block; margin-top: 1.3rem; margin-right: 1.8rem; font-family: var(--mono); font-size: .82rem; border-bottom: 1px solid var(--black); padding-bottom: 2px; transition: color .2s, border-color .2s; }
+    .filmlink:hover { color: var(--g600); border-color: var(--g600); }
+
+    /* Section labels */
+    .label { font-family: var(--mono); font-size: .85rem; font-weight: 400; color: var(--g400); letter-spacing: .14em; text-transform: uppercase; margin-bottom: 1.2rem; }
+    .note { font-family: var(--mono); font-size: .75rem; color: var(--g400); margin: -.6rem 0 1.4rem; line-height: 1.6; }
+    .rule { border: none; border-top: 1px solid var(--g200); }
+
+    /* Stills pager (full width, one still per page) */
+    .stills { padding: 72px 0 84px; }
+    .af-shell { position: relative; }
+    .roll { display: flex; gap: 2px; overflow-x: auto; scrollbar-width: thin; }
+    .af-roll { scroll-snap-type: x mandatory; }
+    .af-roll .shot { flex: 0 0 100%; scroll-snap-align: start; background: #000; cursor: zoom-in; display: block; }
+    .af-roll .shot:focus-visible { outline: 2px solid var(--cyan); outline-offset: -4px; }
+    .af-roll img { width: 100%; height: auto; display: block; }
+    .anav { position: absolute; top: 50%; transform: translateY(-50%); width: 42px; height: 42px; display: flex; align-items: center; justify-content: center; background: rgba(8,8,8,.35); border: 1.5px solid rgba(255,255,255,.55); color: #fff; cursor: pointer; padding: 0; transition: border-color .2s, background .2s; }
+    .anav:hover { border-color: var(--cyan); background: rgba(8,8,8,.6); }
+    .anav.prev { left: .9rem; }
+    .anav.next { right: .9rem; }
+    .anav svg { width: 16px; height: 16px; fill: none; stroke: #fff; stroke-width: 2.2; }
+    .count { font-family: var(--mono); font-size: .75rem; color: var(--g400); margin-top: .8rem; letter-spacing: .08em; }
+
+    /* Prose sections: centered block, left-justified paragraphs */
+    .prose { padding: 84px 0; max-width: 640px; margin: 0 auto; }
+    .prose .label { text-align: center; }
+    .prose p.body { font-size: 1.1rem; color: var(--g600); line-height: 1.8; margin-bottom: 1.3rem; }
+    .prose p.body em { color: var(--black); }
+    .sig { font-family: var(--mono); font-size: .82rem; color: var(--black); margin-top: 1.8rem; }
+    .portrait { width: min(220px, 60%); margin: 0 auto 2rem; }
+    .portrait img { width: 100%; height: auto; aspect-ratio: 1 / 1; display: block; }
+    .prose .more { font-family: var(--mono); font-size: .82rem; text-align: center; margin-top: 1.6rem; }
+    .prose .more a { border-bottom: 1px solid var(--g400); padding-bottom: 2px; margin: 0 .8rem; transition: border-color .2s; }
+    .prose .more a:hover { border-color: var(--black); }
+
+    /* Credits */
+    .creditsec { padding: 84px 0; }
+    .creditsec .label { text-align: center; }
+    .billing { font-family: var(--mono); font-size: .8rem; color: var(--g600); line-height: 2; text-align: center; max-width: 760px; margin: 0 auto 3.2rem; text-wrap: balance; }
+    /* wide screens: cast with special thanks under it on the left, the longer crew list on the right */
+    .cgrid { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: auto 1fr; grid-template-areas: "cast crew" "thanks crew"; gap: 3rem 5rem; align-items: start; }
+    .castcol { grid-area: cast; } .crewcol { grid-area: crew; } .cgrid .thanks { grid-area: thanks; }
+    .cgrid h3 { font-family: var(--mono); font-size: .75rem; font-weight: 400; color: var(--g400); letter-spacing: .12em; text-transform: uppercase; margin-bottom: .9rem; }
+    dl.clist { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 1.2rem; }
+    dl.clist dt, dl.clist dd { padding: .5rem 0; border-top: 1px solid var(--g200); line-height: 1.45; }
+    dl.clist dt { font-weight: 700; font-size: .95rem; }
+    dl.clist dd { font-size: .92rem; color: var(--g600); }
+    dl.crew dt { font-family: var(--mono); font-weight: 400; font-size: .75rem; color: var(--g600); padding-top: .62rem; }
+    dl.crew dd { color: var(--black); }
+    .thanks p { font-size: .95rem; color: var(--g600); line-height: 1.8; }
+
+    /* Behind the scenes strip */
+    .bts { padding: 0 0 84px; }
+    .bts .roll img { height: clamp(220px, 32vw, 380px); width: auto; flex: 0 0 auto; display: block; }
+    .roll:focus-visible { outline: 2px solid var(--navy); outline-offset: -2px; }
+
+    /* Contact */
+    .contact { text-align: center; }
+    .contact p { font-family: var(--mono); font-size: .9rem; color: var(--g600); line-height: 2; }
+    .contact a { border-bottom: 1px solid var(--g400); padding-bottom: 2px; transition: color .2s, border-color .2s; }
+    .contact a:hover { color: var(--black); border-color: var(--black); }
+
+    /* Footer */
+    footer { padding: 2.4rem 0 3rem; border-top: 1px solid var(--g200); }
+    .fin { display: flex; justify-content: space-between; align-items: center; gap: 1.5rem; }
+    .fin .akm { display: flex; align-items: center; gap: .6rem; font-size: .78rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+    .fin .akm img { height: 32px; width: 32px; }
+    .fin .c { font-size: .78rem; color: var(--g400); line-height: 1.7; }
+    .fin .tick { width: 60px; height: 3px; flex-shrink: 0; background: linear-gradient(90deg,var(--lime) 0 20%,var(--pink) 20% 40%,var(--cyan) 40% 60%,var(--blue) 60% 80%,var(--navy) 80% 100%); }
+    .fin nav { display: flex; gap: 1.5rem; font-family: var(--mono); font-size: .75rem; letter-spacing: .08em; text-transform: uppercase; color: var(--g400); }
+    .fin nav a { padding: .5rem 0; transition: color .2s; }
+    .fin nav a:hover { color: var(--black); }
+
+    /* Lightbox (stills) */
+    .lb { border: none; padding: 0; background: var(--black); width: min(1400px, 94vw); margin: auto; }
+    .lb::backdrop { background: rgba(8,8,8,.88); }
+    .lb-frame img { width: 100%; height: auto; display: block; max-height: 80vh; object-fit: contain; background: #000; }
+    .lb-bar { display: flex; justify-content: space-between; align-items: center; gap: 1rem; padding: .6rem .8rem; flex-wrap: wrap; }
+    .lb-bar a { font-family: var(--mono); font-size: .75rem; color: rgba(255,255,255,.75); transition: color .2s; padding: .5rem 0; }
+    .lb-bar a:hover { color: #fff; }
+    .lb-ctl { display: flex; gap: .5rem; align-items: center; }
+    .lb-ctl button { background: none; border: 1.5px solid rgba(255,255,255,.4); color: #fff; font-family: var(--mono); font-size: .78rem; padding: .45rem .9rem; cursor: pointer; transition: border-color .2s; }
+    .lb-ctl button:hover { border-color: var(--cyan); }
+    .lb-ctl .n { font-family: var(--mono); font-size: .75rem; color: rgba(255,255,255,.6); margin-right: .4rem; }
+
+    /* Reveal */
+    .rv { opacity: 0; transform: translateY(20px); transition: opacity .55s ease, transform .55s ease; }
+    .rv.v { opacity: 1; transform: translateY(0); }
+
+    /* Responsive */
+    @media(max-width:900px){
+      .film { grid-template-columns: 1fr; gap: 2.4rem; padding-top: 24px; }
+      .film .poster { width: min(340px, 100%); margin: 0 auto; }
+      .cgrid { grid-template-columns: 1fr; grid-template-rows: auto; grid-template-areas: "cast" "crew" "thanks"; }
+      .fin { flex-direction: column; }
     }
-    .container {
-      padding: 2rem;
-      max-width: 800px;
-      margin: auto;
+    @media(max-width:700px){
+      .bar { flex-wrap: wrap; height: auto; padding: 1rem 0 .4rem; row-gap: .2rem; }
+      .bar nav { width: 100%; gap: 1.4rem; }
+      /* phones: the photo strips bleed to the screen edges */
+      .af-shell, .bts .roll { margin-left: calc(-1 * clamp(1.5rem, 5vw, 4rem)); margin-right: calc(-1 * clamp(1.5rem, 5vw, 4rem)); }
+      .count { padding: 0 clamp(1.5rem, 5vw, 4rem); margin-left: calc(-1 * clamp(1.5rem, 5vw, 4rem)); }
+      .anav { width: 36px; height: 36px; }
     }
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
+    @media(max-width:420px){
+      .bar nav { gap: .8rem; font-size: .75rem; letter-spacing: .05em; }
+      dl.clist { grid-template-columns: 1fr; }
+      dl.clist dd { border-top: 0; padding-top: 0; }
     }
-    h2 {
-      font-size: 1.3rem;
-      margin-top: 2rem;
-      margin-bottom: 0.5rem;
-      text-transform: uppercase;
-    }
-    p {
-      margin: 0.5rem 0;
-    }
-    a {
-      color: #cc0000;
-      text-decoration: none;
-    }
-    .gallery-link {
-      text-align: center;
-      margin-top: 1rem;
-      margin-bottom: 2rem;
-    }
-    .gallery-link a {
-      font-weight: bold;
-      color: #cc0000;
-      font-size: 1rem;
-    }
-    footer {
-      text-align: center;
-      margin-top: 3rem;
-      font-size: 0.9rem;
-      color: #666;
+
+    /* Accessibility */
+    .skip { position: absolute; left: -999px; top: 8px; background: var(--black); color: #fff; padding: .7rem 1.2rem; z-index: 200; font-size: .85rem; font-weight: 600; }
+    .skip:focus { left: 8px; }
+    main:focus { outline: none; }
+    @media print { .rv { opacity: 1; transform: none; } .anav, .lb { display: none; } }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--navy); outline-offset: 3px; }
+    .lb a:focus-visible, .lb button:focus-visible, .anav:focus-visible { outline-color: var(--cyan); }
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; scroll-behavior: auto !important; }
+      .rv { opacity: 1 !important; transform: none !important; }
     }
   </style>
+  <noscript><style>.rv{opacity:1 !important;transform:none !important;}.anav{display:none !important;}</style></noscript>
+  <script>
+    /* Screening lists (.shows) call this right after their markup: each row drops off the day after its
+       date (data-until), and an empty list removes itself, so past dates never need a manual edit */
+    function expireShows(list) {
+      if (!list) return;
+      list.querySelectorAll('li[data-until]').forEach(li => { if (Date.now() >= Date.parse(li.dataset.until)) li.remove(); });
+      if (!list.querySelector('li')) list.remove();
+    }
+  </script>
 </head>
 <body>
 
-<img src="poster.png" alt="Afterlife Poster" class="poster" />
+  <a class="skip" href="#main">Skip to content</a>
 
-<div class="gallery-link">
-  <a href="gallery.html">Gallery →</a>
-</div>
+  <div class="wrap">
+    <header class="bar">
+      <a href="#main" class="lockup" aria-label="Afterlife, back to top">Afterlife</a>
+      <nav aria-label="Site">
+        <a href="#stills">Stills</a>
+        <a href="#statement">Statement</a>
+        <a href="#credits">Credits</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+  </div>
 
-<div class="container">
-  <h1>Afterlife</h1>
-  <p><em>A new outpatient procedure offers an end to April Neal’s grief.</em></p>
+  <main id="main" tabindex="-1">
 
-  <h2>Synopsis</h2>
-  <p>In a near-future where grief can be outsourced, a bereaved artist considers a new outpatient procedure: an AI implant that can copy her mind, replace her with a digital copy, and spare her loved ones the pain of loss. Set one product launch from today, <em>Afterlife</em> is a quiet sci-fi thriller about art, identity, and the slow erasure of the self in the age of artificial intelligence.</p>
+  <div class="wrap">
+    <section class="film" aria-label="Afterlife, a short film">
+      <div class="poster"><img src="assets/poster-laurels.webp" alt="Afterlife film poster, with laurels from its six festivals" width="1000" height="1333" fetchpriority="high"></div>
+      <div>
+        <p class="eyebrow">A short film written and directed by Charles Scott Bell</p>
+        <h1>Afterlife</h1>
+        <p class="lead">A new outpatient procedure offers an end to April Neal&rsquo;s grief.</p>
+        <p class="log">Haunted by grief in a near-future where sadness can be outsourced, April Neal considers a new outpatient procedure: an AI implant that can replicate her mind, replace it with a digital copy, and spare her loved ones the pain of loss. Set one product launch from today, <em>Afterlife</em> is an introspective sci-fi thriller about art, identity, and the slow erasure of the self in the age of artificial intelligence.</p>
+        <div class="credits">24 minutes. 2025. Sci-fi drama. United States.</div>
+        <div class="shows" id="af-shows">
+          <h2 class="mini">Next screenings</h2>
+          <ul role="list">
+            <li data-until="2026-10-12T00:00:00-04:00">
+              <span class="when"><time datetime="2026-10-11T13:30-04:00">Sun, Oct 11, 1:30 p.m.</time></span>
+              <span class="what"><a href="https://tallahasseefilmfestival.com/2026-films/" target="_blank" rel="noopener noreferrer">Tallahassee Film Festival<span class="sr-only"> (opens in a new tab)</span></a> <span class="where">Shorts 7: ALT/ESC. Theater #2, Challenger Learning Center, 200&nbsp;S&nbsp;Duval&nbsp;St. Q&amp;A with the filmmakers after.</span></span>
+            </li>
+            <li data-until="2026-11-29T00:00:00-05:00">
+              <span class="when"><time datetime="2026-11-28T12:45-05:00">Sat, Nov 28, 12:45 p.m.</time></span>
+              <span class="what"><a href="https://festaiv.com/festival/sunscreen-fantastic-fest" target="_blank" rel="noopener noreferrer">Sunscreen Fantastic Fest<span class="sr-only"> (opens in a new tab)</span></a> <span class="where">Shorts Block 2. Coastal Creative, 2201&nbsp;1st&nbsp;Ave&nbsp;S, St.&nbsp;Petersburg.</span></span>
+            </li>
+          </ul>
+        </div>
+        <script>expireShows(document.getElementById('af-shows'));</script>
+        <h2 class="mini">Festivals</h2>
+        <ul class="laurels" role="list">
+          <li class="laurel">Official Selection, <a href="https://miscifi.com/2026-miscifi-awards/" target="_blank" rel="noopener noreferrer">Miami International Science Fiction Film Festival 2026<span class="sr-only"> (opens in a new tab)</span></a> <span class="nom">Six nominations, including Best Director</span></li>
+          <li class="laurel">Official Selection, <a href="https://www.norwescon.org/con/events/film-festival/" target="_blank" rel="noopener noreferrer">Norwescon Speculative Film Fest 2026<span class="sr-only"> (opens in a new tab)</span></a></li>
+          <li class="laurel">Official Selection, <a href="https://www.lacon.org/filmfestival/" target="_blank" rel="noopener noreferrer">LAcon V Worldcon Film Festival 2026<span class="sr-only"> (opens in a new tab)</span></a></li>
+          <li class="laurel">Finalist, <a href="https://brooklynscififilmfest.com/" target="_blank" rel="noopener noreferrer">Brooklyn SciFi Film Festival 2026<span class="sr-only"> (opens in a new tab)</span></a></li>
+          <li class="laurel">Official Selection, <a href="https://tallahasseefilmfestival.com/2026-films/" target="_blank" rel="noopener noreferrer">Tallahassee Film Festival 2026<span class="sr-only"> (opens in a new tab)</span></a></li>
+          <li class="laurel">Official Selection, <a href="https://festaiv.com/festival/sunscreen-fantastic-fest" target="_blank" rel="noopener noreferrer">Sunscreen Fantastic Fest 2026<span class="sr-only"> (opens in a new tab)</span></a></li>
+        </ul>
+        <div>
+          <a class="filmlink" href="mailto:scott@artkid.media?subject=Afterlife%20screener%20request">Request a screener &rarr;</a>
+          <a class="filmlink" href="assets/afterlife-poster-laurels-2025x3000.jpg" download>Download the poster &rarr;</a>
+        </div>
+      </div>
+    </section>
+  </div>
 
-  <h2>Director’s Statement</h2>
-  <p>Before my wife got pregnant, we used to debate the ethics of having children. New life can’t consent to being here. Then, no matter how sheltered, we all live through trauma, learn hard lessons, and have to come to terms, somehow, with our own mortality.</p>
-  <p>Most of us invest in careers, families, communities, art. Even our technology is designed to outsource the messy, painful parts of being human. We build tools and institutions that shield us, entertain us, and do the creative work for us. But what’s the endpoint?</p>
-  <p><em>Afterlife</em> imagines one near-future answer: an AI implant that promises a cure for depression. It copies a person’s mind, lets their original self “transcend,” and leaves behind a digital copy to live for them. The body stays, the grief goes, and of course it’s covered by insurance.</p>
-  <p>I wrote this script while my wife was carrying our son – a time when the hope of new fatherhood was equally met with a creeping fear of unspeakable loss. That tension became the story: If new tech does, one day, offer such a devil’s wager, what could drive us to take it?</p>
-  <p>The real horror isn’t some rogue algorithm. It’s how quickly we might choose numbness over experience. How willingly we might surrender autonomy for the promise of relief. And how close we already are to making choices we can’t claw back.</p>
-  <p>So why’d we have a kid? Ultimately, we agreed that the good outweighs the bad. Life itself is art. The stakes don’t make us flawed, they make us what we are.</p>
-  <p>We live in a time when machines can simulate almost anything. But simulation isn’t experience. Creation still costs something. And that cost – emotional, physical, human – is what gives life (and art) its meaning. <em>Afterlife</em> is about embracing that.</p>
+  <div class="wrap"><hr class="rule"></div>
 
-  <h2>About the Director</h2>
-  <p>Scott Bell is a Tallahassee filmmaker whose work explores the collision between speculative science fiction and deeply personal human stories. In 2016, he founded Cat Family Records, a nonprofit label and art collective that published zines, organized festivals, and supported emerging artists across North Florida. Now through Art Kid Media, he brings that same punk-rooted, DIY ethos to filmmaking.</p>
+  <div class="wrap">
+    <section class="stills" id="stills" aria-labelledby="stills-h">
+      <h2 class="label" id="stills-h">Stills</h2>
+      <p class="note">Cinematography by Laela Kilbourn. Select a still to enlarge it or download the full-resolution original.</p>
+      <div class="af-shell">
+        <div class="roll af-roll" role="group" aria-label="Afterlife stills, scroll horizontally, select one to enlarge">
+          <a class="shot" href="Afterlife_Screenshot_Kilbourn_008.png" data-big="assets/still-008-1920.webp"><img src="assets/still-008-1920.webp" srcset="assets/still-008-960.webp 960w, assets/still-008-1920.webp 1920w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 90vw, 1072px" alt="A canoe on dark water, seen from above" width="1920" height="808" loading="lazy"></a>
+          <a class="shot" href="Afterlife_Screenshot_Kilbourn_001.png" data-big="assets/still-001-1920.webp"><img src="assets/still-001-1920.webp" srcset="assets/still-001-960.webp 960w, assets/still-001-1920.webp 1920w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 90vw, 1072px" alt="A man with a clipboard, seen from below" width="1920" height="806" loading="lazy"></a>
+          <a class="shot" href="Afterlife_Screenshot_Kilbourn_002.png" data-big="assets/still-002-1920.webp"><img src="assets/still-002-1920.webp" srcset="assets/still-002-960.webp 960w, assets/still-002-1920.webp 1920w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 90vw, 1072px" alt="A woman waves from a clinic waiting room" width="1920" height="805" loading="lazy"></a>
+          <a class="shot" href="Afterlife_Screenshot_Kilbourn_004.png" data-big="assets/still-004-1920.webp"><img src="assets/still-004-1920.webp" srcset="assets/still-004-960.webp 960w, assets/still-004-1920.webp 1920w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 90vw, 1072px" alt="A consultation across a desk" width="1920" height="803" loading="lazy"></a>
+          <a class="shot" href="Afterlife_Screenshot_Kilbourn_005.png" data-big="assets/still-005-1920.webp"><img src="assets/still-005-1920.webp" srcset="assets/still-005-960.webp 960w, assets/still-005-1920.webp 1920w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 90vw, 1072px" alt="A woman resting in a canoe, seen from above" width="1920" height="806" loading="lazy"></a>
+          <a class="shot" href="Afterlife_Screenshot_Kilbourn_006.png" data-big="assets/still-006-1920.webp"><img src="assets/still-006-1920.webp" srcset="assets/still-006-960.webp 960w, assets/still-006-1920.webp 1920w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 90vw, 1072px" alt="Two people at dinner, both on their phones" width="1920" height="805" loading="lazy"></a>
+          <a class="shot" href="Afterlife_Screenshot_Kilbourn_007.png" data-big="assets/still-007-1920.webp"><img src="assets/still-007-1920.webp" srcset="assets/still-007-960.webp 960w, assets/still-007-1920.webp 1920w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 90vw, 1072px" alt="A split frame: a woman in an art studio beside a lake" width="1920" height="806" loading="lazy"></a>
+          <a class="shot" href="Afterlife_Screenshot_Kilbourn_009.png" data-big="assets/still-009-1920.webp"><img src="assets/still-009-1920.webp" srcset="assets/still-009-960.webp 960w, assets/still-009-1920.webp 1920w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 90vw, 1072px" alt="A woman in a gallery, a man behind her" width="1920" height="805" loading="lazy"></a>
+          <a class="shot" href="Afterlife_Screenshot_Kilbourn_011.png" data-big="assets/still-011-1920.webp"><img src="assets/still-011-1920.webp" srcset="assets/still-011-960.webp 960w, assets/still-011-1920.webp 1920w" sizes="(max-width: 700px) 100vw, (max-width: 1200px) 90vw, 1072px" alt="A woman sitting on a dock by a lake" width="1920" height="802" loading="lazy"></a>
+        </div>
+        <button class="anav prev" type="button" aria-label="Previous still"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5 8 12l7 7"/></svg></button>
+        <button class="anav next" type="button" aria-label="Next still"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
+      </div>
+      <p class="count" aria-hidden="true">9 stills</p>
+    </section>
+  </div>
 
-  <h2>Contact</h2>
-  <p>Email: <a href="mailto:scott@artkid.media">scott@artkid.media</a><br />
-     Production: <a href="https://artkid.media" target="_blank">artkid.media</a></p>
-</div>
+  <div class="wrap"><hr class="rule"></div>
 
-<footer>
-  &copy; 2025 Scott Bell / Art Kid Media. All rights reserved.
-</footer>
+  <div class="wrap">
+    <section class="prose" id="statement" aria-labelledby="statement-h">
+      <h2 class="label" id="statement-h">Director&rsquo;s statement</h2>
+      <p class="body rv">Before my wife got pregnant, we debated the ethics of having children. New life can&rsquo;t consent to being here. And no matter how sheltered, we all battle trauma, learn hard lessons, and have to come to terms, somehow, with our own mortality.</p>
+      <p class="body rv">Most of us invest in careers, families, communities, art. Even our technology is designed to outsource the messy, painful parts of being human. We build tools and institutions that shield us, entertain us, and do the creative work for us. But what&rsquo;s the endpoint?</p>
+      <p class="body rv"><em>Afterlife</em> imagines one near-future possibility: an AI treatment promising a cure for depression. It copies a person&rsquo;s mind, lets their original self &ldquo;transcend,&rdquo; and leaves behind a digital copy to live for them. The body stays, the grief goes, and of course it&rsquo;s covered by insurance.</p>
+      <p class="body rv">I wrote this script while my wife was carrying our son, a time when the hope of new fatherhood was equally met with the creeping fear of unspeakable loss. That tension became the story: If new tech does, one day, offer such a devil&rsquo;s wager, what could drive us to take it?</p>
+      <p class="body rv">The real horror isn&rsquo;t some rogue algorithm. It&rsquo;s how quickly we might choose numbness over experience. How willingly we might surrender autonomy for the promise of relief. And how close we already are to making choices we can&rsquo;t claw back.</p>
+      <p class="body rv">So why&rsquo;d we have a kid? Ultimately, it was an act of hope. We agreed that the human experience is one worth sharing. The stakes don&rsquo;t make us flawed, they make us what we are.</p>
+      <p class="body rv">We live in a time when machines can simulate almost anything. But that isn&rsquo;t experience. Creation still costs something. And that cost (emotional, physical, human) is what gives life (and art) its meaning. <em>Afterlife</em> is about embracing that.</p>
+      <p class="sig rv">Charles Scott Bell</p>
+    </section>
+  </div>
 
+  <div class="wrap">
+    <section class="prose" id="director" aria-labelledby="director-h" style="padding-top: 0;">
+      <h2 class="label" id="director-h">About the director</h2>
+      <figure class="portrait rv"><img src="assets/csb-headshot.webp" alt="Charles Scott Bell" width="600" height="600" loading="lazy"></figure>
+      <p class="body rv">Charles Scott Bell is a Tallahassee filmmaker whose work explores the collision between speculative science fiction and deeply personal human stories. In 2016, he founded Cat Family Records, a nonprofit label and art collective that published zines, organized festivals, and supported emerging artists across North Florida. Now through Art Kid Media, he brings that same punk-rooted, DIY ethos to filmmaking.</p>
+      <p class="more rv"><a href="https://artkid.media/">Art Kid Media</a><a href="https://www.imdb.com/name/nm16164865/" target="_blank" rel="noopener noreferrer">IMDb<span class="sr-only"> (opens in a new tab)</span></a></p>
+    </section>
+  </div>
+
+  <div class="wrap"><hr class="rule"></div>
+
+  <div class="wrap">
+    <section class="creditsec" id="credits" aria-labelledby="credits-h">
+      <h2 class="label" id="credits-h">Credits</h2>
+      <p class="billing">Written and directed by Charles Scott Bell. Produced by Art Kid Media. Starring Tyra Knight, Mark Ashin, Jason Chimonides, Diego Rocha, and Nidia Alvarez-Nguyen. Cinematography by Laela Kilbourn. Edited by John and Laura VonMutius. Music by One.Will and Alexander Arntzen.</p>
+      <div class="cgrid">
+        <div class="castcol">
+          <h3>Cast</h3>
+          <dl class="clist">
+            <dt>Tyra Knight</dt><dd>April Neal</dd>
+            <dt>Mark Ashin</dt><dd>James Neal</dd>
+            <dt>Jason Chimonides</dt><dd>Dr. Yu</dd>
+            <dt>Diego Rocha</dt><dd>Indi</dd>
+            <dt>Nidia Alvarez-Nguyen</dt><dd>Lisa Neal</dd>
+            <dt>Tristian Warner</dt><dd>Sam Neal</dd>
+            <dt>Galen Olds</dt><dd>Galen Young</dd>
+            <dt>Beeta Rezazadeh</dt><dd>Afterlife Receptionist</dd>
+            <dt>Brandie Pauling</dt><dd>Afterlife (voice)</dd>
+          </dl>
+        </div>
+        <div class="crewcol">
+          <h3>Crew</h3>
+          <dl class="clist crew">
+            <dt>Writer and director</dt><dd>Charles Scott Bell</dd>
+            <dt>Producers</dt><dd>Charles Scott Bell, Cierra Alexandria Bell</dd>
+            <dt>Cinematographer</dt><dd>Laela Kilbourn</dd>
+            <dt>Editor</dt><dd>John VonMutius</dd>
+            <dt>Assistant editor</dt><dd>Laura Anuszkiewicz VonMutius</dd>
+            <dt>Composer</dt><dd>Alexander Arntzen</dd>
+            <dt>Music</dt><dd>One.Will</dd>
+            <dt>Production design</dt><dd>April Cluess, Derek Fleming</dd>
+            <dt>Hair and makeup</dt><dd>Joey Egiziano</dd>
+            <dt>Costumes</dt><dd>Hailey Eaton</dd>
+            <dt>Property master</dt><dd>Marq Storm</dd>
+            <dt>Graphic designer</dt><dd>Melissa Fleming</dd>
+            <dt>Sound designer</dt><dd>Hisham Billal</dd>
+            <dt>Sound mixer</dt><dd>Corey McHugh</dd>
+            <dt>Visual effects</dt><dd>Reece Mulley, Patrick Taylor</dd>
+            <dt>Animator</dt><dd>Muhammad Owais</dd>
+            <dt>Colorist</dt><dd>Patrick Taylor</dd>
+            <dt>Second assistant director</dt><dd>Louis Garcia</dd>
+            <dt>Script supervisor</dt><dd>Justin Wolf</dd>
+            <dt>Casting coordinator</dt><dd>Samantha Jay</dd>
+            <dt>First assistant camera</dt><dd>Angel Avalos</dd>
+            <dt>Second assistant camera</dt><dd>Krystal Alexandria, Kendall Kelly</dd>
+            <dt>Digital imaging technician</dt><dd>Perrone Ford</dd>
+            <dt>Gaffer</dt><dd>Chris Shipe</dd>
+            <dt>Key grip</dt><dd>Brian Jackson</dd>
+            <dt>Grip</dt><dd>Jody Dubose</dd>
+            <dt>Production assistants</dt><dd>Amos Cunningham, Lucas Gonzalez, Joey Harbour, Jada Leavy, Grayson Mullen</dd>
+            <dt>Set medics</dt><dd>Alexis Cejas Carbonell, Trevor Russo</dd>
+            <dt>Craft services</dt><dd>Lev Romano, Samantha Trenholm</dd>
+          </dl>
+        </div>
+        <div class="thanks">
+          <h3>Special thanks</h3>
+          <p>Jake Boynton, Brie Chanai Bryant, Will Crowley, Matt Denney, Ben Fox, Cameron Gilson, Tina Horvath, Josh Johnson, Stirling Lake, Andrew McFarland, Hadley Peterson, Gabrielle Simpson, Michael Trainer, John Turner, Jennifer Ventura, and Nick Warner.</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap">
+    <section class="bts" aria-labelledby="bts-h">
+      <h2 class="label" id="bts-h">Behind the scenes</h2>
+      <div class="roll" tabindex="0" role="group" aria-label="Behind the scenes photos, scroll horizontally">
+        <img src="assets/bts-1.webp" alt="Crew with a green canoe in the woods" width="540" height="720" loading="lazy">
+        <img src="assets/bts-4.webp" alt="Crew on a cypress swamp dock" width="540" height="720" loading="lazy">
+        <img src="assets/bts-3.webp" alt="Camera and dolly track in a gallery studio" width="959" height="720" loading="lazy">
+        <img src="assets/bts-5.webp" alt="Camera crew at work in the gallery set" width="582" height="720" loading="lazy">
+        <img src="assets/bts-2.webp" alt="A light and crew in an office hallway" width="540" height="720" loading="lazy">
+      </div>
+    </section>
+  </div>
+
+  <div class="wrap"><hr class="rule"></div>
+
+  <div class="wrap">
+    <section class="prose contact" id="contact" aria-labelledby="contact-h">
+      <h2 class="label" id="contact-h">Contact</h2>
+      <p>Screeners, press, and programming: <a href="mailto:scott@artkid.media?subject=Afterlife">scott@artkid.media</a></p>
+      <p>Produced by <a href="https://artkid.media/">Art Kid Media</a> in Tallahassee, Florida.</p>
+    </section>
+  </div>
+
+  </main>
+
+  <div class="wrap">
+    <footer>
+      <div class="fin">
+        <a class="akm" href="https://artkid.media/"><img src="assets/logo-128.webp" alt="" width="32" height="32">Art Kid Media</a>
+        <span class="c">&copy; 2025 Charles Scott Bell / Art Kid Media. All rights reserved.</span>
+        <div class="tick"></div>
+        <nav aria-label="Elsewhere">
+          <a href="https://www.imdb.com/title/tt37285372/" target="_blank" rel="noopener noreferrer">IMDb<span class="sr-only"> (opens in a new tab)</span></a>
+          <a href="https://instagram.com/artkidmedia" target="_blank" rel="noopener noreferrer">Instagram<span class="sr-only"> (opens in a new tab)</span></a>
+          <a href="mailto:scott@artkid.media?subject=Afterlife">Email</a>
+        </nav>
+      </div>
+    </footer>
+  </div>
+
+  <dialog class="lb" id="lightbox" aria-label="Still viewer">
+    <div class="lb-frame"></div>
+    <div class="lb-bar">
+      <a id="lb-dl" href="#" download>Download full resolution</a>
+      <div class="lb-ctl">
+        <span class="n" id="lb-n" aria-live="polite"></span>
+        <button type="button" id="lb-prev" aria-label="Previous still"><span aria-hidden="true">&larr;</span></button>
+        <button type="button" id="lb-next" aria-label="Next still"><span aria-hidden="true">&rarr;</span></button>
+        <button type="button" id="lb-close">Close <span aria-hidden="true">&#10005;</span></button>
+      </div>
+    </div>
+  </dialog>
+
+  <script>
+    /* Scroll reveal */
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('v'); io.unobserve(e.target); } });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+    /* Stills pager arrows */
+    const roll = document.querySelector('.af-roll');
+    const behavior = window.matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth';
+    document.querySelector('.anav.prev').addEventListener('click', () => roll.scrollBy({ left: -roll.clientWidth, behavior }));
+    document.querySelector('.anav.next').addEventListener('click', () => roll.scrollBy({ left: roll.clientWidth, behavior }));
+
+    /* Stills lightbox: each still is a link to its full-resolution original; with JavaScript it opens here
+       instead, with previous/next and a download link */
+    const lb = document.getElementById('lightbox');
+    if (lb && typeof lb.showModal === 'function') {
+      const shots = [...roll.querySelectorAll('a.shot')];
+      const frame = lb.querySelector('.lb-frame');
+      const dl = document.getElementById('lb-dl');
+      const n = document.getElementById('lb-n');
+      let i = 0;
+      const show = k => {
+        i = (k + shots.length) % shots.length;
+        const im = document.createElement('img');
+        im.src = shots[i].dataset.big;
+        im.alt = shots[i].querySelector('img').alt;
+        frame.replaceChildren(im);
+        dl.href = shots[i].getAttribute('href');
+        n.textContent = (i + 1) + ' / ' + shots.length;
+      };
+      shots.forEach((a, k) => a.addEventListener('click', e => { e.preventDefault(); show(k); lb.showModal(); document.getElementById('lb-close').focus(); }));
+      document.getElementById('lb-prev').addEventListener('click', () => show(i - 1));
+      document.getElementById('lb-next').addEventListener('click', () => show(i + 1));
+      lb.addEventListener('keydown', e => { if (e.key === 'ArrowLeft') show(i - 1); if (e.key === 'ArrowRight') show(i + 1); });
+      document.getElementById('lb-close').addEventListener('click', () => lb.close());
+      lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+      /* on close, focus (and the pager) land on the still last viewed */
+      lb.addEventListener('close', () => { frame.replaceChildren(); shots[i].focus(); });
+    }
+  </script>
 </body>
 </html>
